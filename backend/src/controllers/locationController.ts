@@ -24,10 +24,8 @@ export const shareLocation = async (req: Request, res: Response): Promise<void> 
 export const getAllLocations = async (req: Request, res: Response): Promise<void> => {
     try {
         const locations = await Location.find();
-        console.log({ locations });
         res.status(200).json(locations);
     } catch (error: any) {
-        console.log({ error })
         res.status(500).json({ message: 'Failed to fetch locations', error: error.message });
     }
 };

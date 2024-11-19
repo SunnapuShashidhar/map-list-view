@@ -37,7 +37,6 @@ export const shareLocation = async () => {
 
         if (response.ok) {
           Alert.alert('Location shared successfully!');
-          console.log('Location shared successfully!');
         } else {
           throw new Error(`Error sharing location: ${response.statusText}`);
         }
